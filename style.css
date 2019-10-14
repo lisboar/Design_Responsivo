@@ -20,7 +20,7 @@ header{
 
 .backgroundHeader{
     color: #FC2F68;
-    background-color:  #08295E;
+    background-color:  #003048;
 }
 
 .logo{
@@ -39,9 +39,10 @@ img {
 /* ____________________________________________ */
 
 
-nav ul{
+.subMenu{
     position: fixed;
-    left: 0%;
+    right: -100%;
+    /* left: -100%; */
     top: 0;
     width: 75%;
     height: 100%;
@@ -59,10 +60,9 @@ nav ul li{
 nav ul li a{
     color: rgb(10, 175, 120);
     display: block;
-    padding: 10px;
+    padding: 15px;
 }
 
-nav ul li:hover,
 nav ul li a:hover{
     background-color: #112336;
     color: #FC2F68;
@@ -81,16 +81,34 @@ nav ul li ul li a {
     border-bottom: 1px solid #112336;   
 }
 
-nav ul li ul li:hover,
 nav ul li ul li a:hover{
     background-color: #112336;
     color: #07F9A2;
 }
 
-/* background-color: #112336;
-    color: #07F9A2; */
+.botaoMenu{
+    width: 45px;
+    height: 45px;
+    float: right;
+    cursor: pointer;
+    background: #07F9A2 url(../Design_responsivo/images/menu.png)no-repeat center;
+    background-size: 30px;
+    border-radius: 25%;
+    opacity: initial;
+}
 
+.botaoMenu.menuAtivo{
+    background-color: rgb(1, 226, 144);
+}
 
+.botaoMenu:hover{
+    background-color: rgb(1, 226, 144);
+    box-shadow: 0 9px 13px 0 rgba(0, 0, 0, 0.2), 0 11px 25px 0 rgba(0, 0, 0, 0.19);
+    width: 46px;
+    height: 46px;
+    border-radius: 23%;
+
+}
 
 
 /* ____________________________________________ */
@@ -110,7 +128,7 @@ nav ul li ul li a:hover{
     color: #08295E;
     height: 20px;
     border: none;
-    background-color: #CFFF19;
+    background-color: #07F9A2;
     border-radius: 10px;
     padding: 0;
 }
@@ -124,7 +142,30 @@ nav ul li ul li a:hover{
 }
 
 ::-webkit-input-placeholder{
-    color: #AECA20;
+    color: rgb(6, 204, 131);
     font-style: italic;
     font-size: 1.0em;
+}
+
+
+/* ____________________________________________ */
+
+
+.fundoBody{
+    color: rgb(235, 225, 199);
+    background-color: #122125;
+}
+
+.galeria img{
+    padding: 20px;
+    height: 310px;
+    -webkit-filter: grayscale(80%);
+    filter: grayscale(80%);
+    -webkit-transition: all 1s ease ;
+}
+
+.galeria img:hover{
+    -webkit-filter: grayscale(0%);
+    filter: grayscale(0%);
+    -webkit-transition: all 1s ease ;
 }
